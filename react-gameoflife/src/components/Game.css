@@ -1,0 +1,23 @@
+.Game {
+    width: auto;
+    margin: 5% 2% 5% 2%;
+
+}
+
+.Board {
+    position: relative;
+    margin-bottom: 5%;
+    background-color: white;
+    border: 1px solid black;
+    background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px);
+}
+
+.Cell {
+    background: black;
+    position: absolute;
+}
+
+.Controls {
+    width: 70%;
+    text-align: center;
+}
