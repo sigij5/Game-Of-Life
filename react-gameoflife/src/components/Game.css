@@ -19,5 +19,26 @@
 
 .Controls {
     width: 70%;
+    display: flex;
+}
+.Inputs, .Buttons{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    width: auto;
+}
+.Buttons{
+    margin-left: 10%;
+    width: 50%;
+}
+
+input{
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+button{
+    width: auto;
+    margin-bottom: 20%;
 }

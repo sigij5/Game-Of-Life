@@ -11,7 +11,10 @@ function App() {
       <section className="Main">
         <Game />
         <div className="Instructions">
-          Rules:
+          <h4>Rules:</h4>
+        </div>
+        <div className= "Presets">
+
         </div>
       </section>
     </div>
