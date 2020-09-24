@@ -4,8 +4,6 @@ import './Game.css';
 
 
 const cell_size = 25;
-const width = 500;
-const height = 500;
 
 class Game extends React.Component {
     constructor() {
@@ -183,7 +181,7 @@ class Game extends React.Component {
 
                 <div className = "Controls">
                     <div className= "Inputs">
-                        Generation time in msec:<input value = {this.state.interval} onChange={this.handleIntervalChange} />
+                        Generation interval in msec:<input value = {this.state.interval} onChange={this.handleIntervalChange} />
                         Rows: <input value = {this.state.rows} onChange={this.handleRowChange} />
                         Columns: <input value = {this.state.cols} onChange={this.handleColChange} />
                     </div>
