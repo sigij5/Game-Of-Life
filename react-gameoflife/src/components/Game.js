@@ -1,5 +1,6 @@
 import React from 'react';
 import Cell from './Cell'
+import getElementOffset from '../utils/GetElement'
 import './Game.css';
 
 
@@ -8,8 +9,6 @@ const cell_size = 25;
 class Game extends React.Component {
     constructor() {
         super();
-        // this.rows = height / cell_size;
-        // this.cols = width / cell_size;
         this.board = this.makeEmptyBoard();
     }
     state = { 
@@ -25,8 +24,6 @@ class Game extends React.Component {
         console.log('running iteration');
         let newBoard = this.makeEmptyBoard();
         const { rows, cols } = this.state;
-
-        // Logic for each iteration here
 
         for( let y = 0; y < rows; y++) {
             for( let x = 0; x < cols; x++) {
@@ -113,7 +110,7 @@ class Game extends React.Component {
         return cells;
     }
 
-    //Find Element in viewport regardless of scrolling
+    // Find Element in viewport regardless of scrolling
     getElementOffset() {
         const rect = this.boardRef.getBoundingClientRect();
         const doc = document.documentElement;
@@ -181,9 +178,9 @@ class Game extends React.Component {
 
                 <div className = "Controls">
                     <div className= "Inputs">
-                        Generation interval in msec:<input value = {this.state.interval} onChange={this.handleIntervalChange} />
                         Rows: <input value = {this.state.rows} onChange={this.handleRowChange} />
                         Columns: <input value = {this.state.cols} onChange={this.handleColChange} />
+                        Generation time in msec:<input value = {this.state.interval} onChange={this.handleIntervalChange} />
                     </div>
                     <div className="Buttons">
                         {isRunning ?
