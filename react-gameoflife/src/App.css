@@ -2,12 +2,26 @@
   text-align: center;
 } */
 
+@keyframes neoncycle{
+  0% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;}
+  50% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ae23, 0 0 20px #00ae23, 0 0 25px #00ae23, 0 0 30px #00ae23, 0 0 35px #00ae23;}
+  100% {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;}
+}
 
+.Title{
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  text-decoration:none;
+
+  animation: neoncycle 8s infinite;
+
+}
 
 
 .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
+  background-color: teal;
+  height: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,10 +36,32 @@
 
 .Main {
   display: flex;
+  border-bottom: 2px solid grey;
 }
 
 .Instructions {
   width: 30%;
-  margin: 5% 2% 5% 0%; 
+  margin: 2% 2% 5% 0%; 
+  border: 2px dashed grey;
+  height: 70%;
+}
+
+.About{
+  text-align: center;
+  padding: 0% 5% 0% 5%;
+  margin: 0% 0% 5%;
+  border-bottom: 2px solid grey;
+}
+
+.Memoriam{
+  text-align: center;
+}
+
+li{
+  margin-bottom: 10%;
+}
+
+.App{
+  background-color: #61dafb;
 }
 
