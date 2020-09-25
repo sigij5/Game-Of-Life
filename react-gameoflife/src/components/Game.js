@@ -140,7 +140,7 @@ class Game extends React.Component {
     handleRandom = () => {
         for (let y = 0; y < this.state.rows; y++) {
             for (let x = 0; x < this.state.cols; x++) {
-                this.board[y][x] = (Math.random() >= 0.5);
+                this.board[y][x] = (Math.random() >= 0.8);
             }
         }
 
@@ -155,10 +155,14 @@ class Game extends React.Component {
     }
 
     handleRowChange = e => {
-        this.setState({ rows: e.target.value })
+        if (e.target.value < 100){
+            this.setState({ rows: e.target.value })
+        }
     }
     handleColChange = e => {
-        this.setState({ cols: e.target.value })
+        if(e.target.value < 100){
+            this.setState({ cols: e.target.value })
+        }
     }
 
     render() {
